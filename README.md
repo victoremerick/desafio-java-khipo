@@ -40,7 +40,7 @@ Desenvolver uma API em Java Spring Boot que implemente um sistema de gerenciamen
 ### 6.Testes
 - Escrever testes unitários para os principais componentes e serviços da aplicação.
 
-###7. Documentação
+### 7. Documentação
 - Documentar todos os endpoints da API com Swagger ou ferramenta similar
 
 
