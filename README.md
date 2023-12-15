@@ -1,14 +1,10 @@
-<p align="center">
-  <img title="a title" alt="Alt text" src="https://media.licdn.com/dms/image/D4E16AQGjCVuzlCthvg/profile-displaybackgroundimage-shrink_200_800/0/1690574706700?e=2147483647&v=beta&t=zlY1Mc10yQ3gA9qiZ4sZ7m8PkE-HIu8Haa1fUyKb_fU">
-</p>
-
 # Desafio Backend | Java
 
 Olá, candidato! Se você chegou até aqui, é porque demonstrou interesse em fazer parte do nosso time. Preparamos um desafio para entendermos um pouco mais sobre suas habilidades como desenvolvedor backend em Java.
 
 ## 🚀 Objetivo:
 
-Desenvolver uma API em Java Spring Boot que implemente um sistema de gerenciamento de pedidos para um restaurante.
+Desenvolver uma API em Java Spring Boot que implemente um sistema de gerenciamento de pedidos para um restaurante, integrando o RabbitMQ para lidar com tarefas assíncronas, como notificações de status do pedido.
 
 ## 📜 Requisitos:
 
@@ -19,6 +15,7 @@ Desenvolver uma API em Java Spring Boot que implemente um sistema de gerenciamen
 - Maven ou Gradle
 - Banco de dados de sua escolha (H2, MySQL, PostgreSQL, etc.)
 - Testes com JUnit e Mockito
+- RabbitMQ
 - Documentação da API com Swagger ou similar
 
 ### 2. Gerenciamento de Produtos:
@@ -29,27 +26,31 @@ Desenvolver uma API em Java Spring Boot que implemente um sistema de gerenciamen
 - Criar e listar pedidos.
 - Cada pedido deve conter um ou mais produtos e o valor total do pedido.
 - Implementar a funcionalidade de adicionar produtos a um pedido.
+- Publicar mensagens no RabbitMQ quando um pedido for criado ou atualizado.
 
-### 4. Validações e Erros:
+### 4. Mensageria com RabbitMQ
+- Configurar filas e trocas no RabbitMQ para gerenciar mensagens de pedidos.
+- Implementar consumidores para processar mensagens de pedidos (e.g., notificações, atualização de status).
+
+### 5. Validações e Erros:
 - Implemente validações para garantir a integridade dos dados.
 - Responda com mensagens de erro claras e status HTTP apropriados.
 
-### 5. Autenticação
+### 6. Autenticação
 - Implementar autenticação básica ou JWT para proteger as rotas da API.
 
-### 6.Testes
-- Escrever testes unitários para os principais componentes e serviços da aplicação.
+### 7. Testes
+- Escrever testes unitários e de integração, incluindo testes para a lógica de mensageria.
 
-### 7. Documentação
-- Documentar todos os endpoints da API com Swagger ou ferramenta similar
-
+### 8. Documentação
+- Documentar todos os endpoints da API e o fluxo de mensageria com Swagger ou ferramenta similar.
 
 ## 🥇 Diferenciais:
 
-- Testes de integração.
 - Paginação nos endpoints.
 - Registro de logs.
 - Dockerização da aplicação.
+- Tratamento de erros e rejeições de mensagens no RabbitMQ.
   
 ## 🗳️ Instruções de Submissão:
 
@@ -62,6 +63,7 @@ Desenvolver uma API em Java Spring Boot que implemente um sistema de gerenciamen
 - Estrutura do código e organização.
 - Uso adequado das ferramentas e tecnologias.
 - Implementação dos requisitos e regras de negócio.
+- Integração e eficiência do uso do RabbitMQ.
 - Design e usabilidade.
 - Funcionalidades extras (diferenciais).
 
