@@ -50,7 +50,6 @@ Desenvolver uma API em Java Spring Boot que implemente um sistema de gerenciamen
 - Estrutura do código e organização.
 - Uso adequado das ferramentas e tecnologias.
 - Implementação dos requisitos e regras de negócio.
-- Integração e eficiência do uso do RabbitMQ.
 - Design e usabilidade.
 - Funcionalidades extras (diferenciais).
 
