@@ -69,15 +69,3 @@ services:
       - 'POSTGRES_USER=khipo'
     ports:
       - "5432:5432"
-
-  react-app:
-    container_name: 'frontend'
-    image: node:14-alpine
-    depends_on:
-      - nginx
-    ports:
-      - "3000:3000"
-    volumes:
-      - ../frontend/khipo-frontend-teste:/app
-    working_dir: /app
-    command: npm start
